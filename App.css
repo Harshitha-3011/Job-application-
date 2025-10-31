@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #d0f3fa 50%, #f7f9fc 100%);
+  min-height: 100vh;
+}
+header {
+  background: linear-gradient(90deg, #00707a 60%, #00b6c6 100%);
+  color: white;
+  padding: 50px 20px 35px;
+  text-align: center;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 68, 100, 0.10);
+}
+header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+header p {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  opacity: 0.95;
+}
+nav {
+  background: #009a9a;
+  text-align: center;
+  padding: 15px 0;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 2px 24px rgba(0,168,168,0.06);
+}
+nav a {
+  color: #FFF;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 1.06rem;
+  padding: 10px 25px;
+  border-radius: 22px;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+  display: inline-block;
+}
+nav a:hover, nav a.active {
+  background: #fff;
+  color: #009a9a;
+  transform: translateY(-2px) scale(1.04);
+}
+.container {
+  max-width: 900px;
+  margin: 38px auto;
+  padding: 35px 30px 30px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,100,180,0.09);
+}
+h2 {
+  color: #009a9a;
+  margin-top: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+/* Available Jobs Section */
+.available-jobs-title {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #037386;
+  text-shadow: 0 1.5px 0 #b8ebf2;
+  letter-spacing: 1px;
+  border-left: 8px solid #00b6c6;
+  padding-left: 18px;
+  background: linear-gradient(90deg, #f9fdff, #e0fafe 95%);
+  border-radius: 11px;
+  max-width: 380px;
+  box-shadow: 0 2px 12px rgba(0,185,185,0.07);
+}
+.job-listing {
+  border: 1px solid #e4ecf2;
+  padding: 18px 24px;
+  margin-bottom: 18px;
+  border-radius: 11px;
+  background: linear-gradient(90deg, #f3fcfb 60%, #e5eefa 100%);
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.12s;
+  position: relative;
+}
+.job-listing:hover {
+  border-color: #00b6c6;
+  box-shadow: 0 6px 32px rgba(0,130,195,0.16);
+  transform: translateY(-2.5px) scale(1.018);
+  z-index: 1;
+}
+.job-listing h3 {
+  position: relative;
+  padding-left: 18px;
+}
+.job-listing h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 9px;
+  height: 9px;
+  background: #00b6c6;
+  border-radius: 50%;
+  display: inline-block;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: inherit;
+}
+form label {
+  font-weight: 600;
+  color: #17606e;
+}
+form input, form textarea, form select {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1.5px solid #b9dde4;
+  font-size: 1.08rem;
+  background: #fafdff;
+  margin-top: 2px;
+  transition: border 0.2s;
+}
+form input:focus, form textarea:focus, form select:focus {
+  border-color: #009a9a;
+  outline: none;
+  background: #f0f7f9;
+}
+form button, button, .btn {
+  padding: 12px;
+  background: linear-gradient(90deg, #00b6c6 0%, #009a9a 100%);
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.08rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 4px;
+  letter-spacing: 0.6px;
+  transition: background 0.14s, box-shadow 0.12s, transform 0.09s;
+  box-shadow: 0 2px 12px rgba(0,180,180,0.09);
+}
+form button:hover, button:hover, .btn:hover {
+  background: linear-gradient(90deg, #00d4b7 0%, #11858d 100%);
+  transform: translateY(-1px) scale(1.03);
+}
+.container form, .container > form {
+  max-width: 410px;
+  margin: 0 auto;
+}
+.error {
+  color: #e62841;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+footer {
+  background: #e0f7f3;
+  text-align: center;
+  padding: 22px 10px;
+  margin-top: 44px;
+  color: #247;
+  border-top: 1px solid #8adad9;
+  border-radius: 14px 14px 0 0;
+  font-size: 1.05rem;
+  opacity: 0.83;
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 13px;
+    margin: 9px;
+  }
+  nav a {
+    margin: 8px 4px;
+    font-size: 0.99rem;
+    padding: 8px 13px;
+  }
+  header {
+    padding: 33px 7px 20px;
+    font-size: 1.1rem;
+  }
+}
+::-webkit-input-placeholder { color: #aaa; opacity:0.85;}
+::-moz-placeholder { color: #aaa;}
+:-ms-input-placeholder { color: #aaa;}
+::placeholder { color: #aaa;}
