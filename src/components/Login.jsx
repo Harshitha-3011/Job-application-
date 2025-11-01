@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Login({ setUser }) {
   const [creds, setCreds] = useState({ email: '', password: '' });
@@ -33,7 +33,7 @@ function Login({ setUser }) {
         <input type="password" name="password" value={creds.password} onChange={handleChange} required />
         <button type="submit">Login</button>
       </form>
-      <p>Don't have an account? <a href="/signup">Sign up</a></p>
+      <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
     </div>
   );
 }
